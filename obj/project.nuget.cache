@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "wAc3KK3niP5ZX+OOHbA5G06n2zf5pV40+oq5G/uZ6n4KVU8qvaS6FKPYlNzPoiyv4GIVSTYaMcSY6OmdhJ9Bmg==",
+  "dgSpecHash": "lvFkYC5cHYVRSrTbSvhR9AT4APtSpkg578cKIglbta052mI6a3zzilJWP2+/NFNC9VSDy7nbzwpvBc/nYGVdWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Xamarine\\Kiosko\\Kiosko.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ulize\\Desktop\\Kiosco\\kiosko-cms\\Kiosko.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ulize\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512",
+    "C:\\Users\\ulize\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\ulize\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\ulize\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

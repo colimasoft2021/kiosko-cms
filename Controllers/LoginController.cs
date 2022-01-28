@@ -13,10 +13,12 @@ namespace Kiosko.Controllers
     public class LoginController : Controller
     {
         private readonly LoginContext _login;
+        private readonly KColSoftContext _KColSoft;
 
-        public LoginController(LoginContext contexto)
+        public LoginController(LoginContext login, KColSoftContext kColSoft)
         {
-            _login = contexto;
+            _login = login;
+            _KColSoft = kColSoft;
         }
         public IActionResult Index()
         {
@@ -32,7 +34,7 @@ namespace Kiosko.Controllers
             {
                 new SqlParameter("@Email",item.Email),
                 new SqlParameter("@Pass",item.Pass),
-               /* new SqlParameter("@Usuario", item.Email),*/
+                new SqlParameter("@Usuario", item.Email),
             };
 
             try
@@ -45,7 +47,7 @@ namespace Kiosko.Controllers
                 else
                 {
                     TempData["msg"] = "Bienvenido";
-                    //var res = _KColSoft.KColSoftsItem.FromSqlRaw<KColSoftModel>("exec dbo.RegistroDB @Usuario", param).ToList();
+                    var res = _KColSoft.KColSoftsItem.FromSqlRaw<KColSoftModel>("exec dbo.RegistroDB @Usuario", param).ToList();
                 }
 
                 return View("Login");

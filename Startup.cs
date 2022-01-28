@@ -26,6 +26,7 @@ namespace Kiosko
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<LoginContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionTest")));
+            services.AddDbContext<KColSoftContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionTest1")));
             services.AddControllersWithViews();
         }
 

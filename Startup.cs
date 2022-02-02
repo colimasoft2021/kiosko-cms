@@ -27,6 +27,7 @@ namespace Kiosko
         {
             services.AddDbContext<LoginContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionTest")));
             services.AddDbContext<KColSoftContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionTest1")));
+            services.AddDbContext<RegistroCursoContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionTest1")));
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
         }

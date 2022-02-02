@@ -1,8 +1,24 @@
 ﻿@{
     ViewData["Title"] = "Pagina de inicio";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Hola que hace?</h1>
-    <p>No entrar si eres menor de 18 años <a href="https://i.pinimg.com/550x/e4/00/79/e400795ffcf50a339b22e44b27767d91.jpg">Xvideos.com</a>.</p>
-</div>
+<head>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    @*<link rel="stylesheet" href="~/css/site.css" />*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="CompoImagen" class="w-50 bg-secondary p-3">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <br />
+        <form action="/file-upload"
+              class="dropzone p-2"
+              id="my-awesome-dropzone">
+        </form>
+        <input class="w-100 mt-1" type="text" placeholder="Pie de Foto" />
+    </div>
+</body>

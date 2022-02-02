@@ -52,6 +52,7 @@ namespace Kiosko.Controllers
 
             try
             {
+                
                 var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @Email, @Pass", param).ToList();
                 if (result.Count == 0)
                 {

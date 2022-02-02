@@ -27,7 +27,8 @@ namespace Kiosko
         {
             services.AddDbContext<LoginContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionTest")));
             services.AddDbContext<KColSoftContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConexionTest1")));
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

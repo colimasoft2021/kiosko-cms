@@ -46,6 +46,7 @@ namespace Kiosko.Controllers
                 }
                 else
                 {
+                    //xd
                     TempData["msg"] = "Bienvenido";
                     var res = _KColSoft.KColSoftsItem.FromSqlRaw<KColSoftModel>("exec dbo.RegistroDB @Usuario", param).ToList();
                 }

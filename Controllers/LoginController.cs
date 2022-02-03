@@ -26,7 +26,7 @@ namespace Kiosko.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(LoginModel item)
+        public IActionResult Login(LoginModel item)
         {
 
 
@@ -40,6 +40,7 @@ namespace Kiosko.Controllers
             try
             {
                 var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @Email, @Pass", param).ToList();
+                
                 if (result.Count == 0)
                 {
                     TempData["msg"] = "Usuario o Contrasena incorrectos, intenete otra vez";
@@ -60,6 +61,33 @@ namespace Kiosko.Controllers
                 throw;
             }
         
+        }
+        [HttpPost]
+        public IActionResult Index(LoginModel item)
+        {
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@Email",item.Email),
+                new SqlParameter("@Pass",item.Pass)
+            };
+            try
+            {
+                var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @Email, @Pass", param).ToList();
+                if (result.Count == 0)
+                {
+                    result[0].Pass = "1";
+                    return Ok(result);
+                }
+                else
+                {
+                    result[0].Pass = "0";
+                    return Ok(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

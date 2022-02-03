@@ -1,0 +1,89 @@
+﻿* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 88px;
+    background: #455A64;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+    .header .logo {
+        padding: 20px;
+    }
+
+        .header .logo .loguito {
+            width: 200px;
+            height: 48.05px;
+        }
+
+    .header .header-hija {
+        margin-right: 30px;
+        margin-top: 20px;
+    }
+
+
+        .header .header-hija .buscador {
+            margin-right: 15px;
+        }
+
+.boton-buscador:hover {
+    cursor: pointer;
+}
+
+.boton-buscador {
+    background-color: transparent;
+    border: none;
+}
+
+.boton-perfil {
+    background-color: transparent;
+    border: none;
+}
+
+aside .elfondo .fondo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    /*align-items:center ;  /*este estilo se encarga de colocal nuestros elementos en medio de acuerdo a la dimension que le dimos del estilo de abajo
+                                    align-items:start => coloca los elementos en la parte de arriba y align-items:end
+                                    align-items:baseline => este estilo lo que va a hacer que la caja donde esta el elemento va a tomar el tamaño de su contenido*/
+    width: 331px; /*Este estilo hace que tenga una dimension del 70% de la pantalla */
+    height: 100%;
+    background: #455A64;
+}
+
+.main .Listas{
+    padding-top: 84px;
+    padding-left:20px
+}
+
+    .main .elboton {
+        position: absolute;
+        left: 15%;
+        top: 90%;
+    }
+
+    .main .boton {
+        color: white;
+        width: 225px;
+        height: 60px;
+        border: 1px dashed #FFFFFF;
+        box-sizing: border-box;
+        font-size: 23px;
+        background-color: transparent;
+    }

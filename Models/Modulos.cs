@@ -9,9 +9,9 @@ namespace Kiosko.Models
     public class Modulos
     {
         [Key]
-        public int id { get; set; }
-        public string titulo { get; set; }
-        public bool acceso_directo { get; set; }
-        public int orden { get; set; }
+        public int intModuloKey { get; set; }
+        public string vchTitulo { get; set; }
+        public Nullable<bool> bitAccesoDirecto { get; set; }
+        public Nullable<int> intOrden { get; set; }
     }
 }

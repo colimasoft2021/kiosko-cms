@@ -9,6 +9,6 @@ namespace Kiosko.Models
     [Keyless]
     public class KColSoftModel
     {
-        public string KUsuario { get; set; }
+        public string vchKUsuario { get; set; }
     }
 }

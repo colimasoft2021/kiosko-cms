@@ -3,21 +3,37 @@
 }
 <head>
     @*<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>*@
-    <link rel="stylesheet" href="~/css/CompoImagen.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Components.css" />
 </head>
 <body style="background-color:black">
     <div id="CompoImagen" class="w-50 bg-white text-dark p-3 rounded">
+        <div class="lblTitulo">
+            Imagen
+        </div>
         <button class="boton-perfil">
-            <img class="perfil" src="~/img/trash.png" alt="perfil" width="19.64px">
+            <img class="perfil" src="~/img/trash.png" alt="Eliminar" width="19.64px">
         </button>
         <br />
         <form action="/file-upload"
               class="dropzone mt-1"
               id="DropImagen">
         </form>
-        <input class="w-100 mt-1" type="text" placeholder="Pie de Foto" />
+        <input class="w-100 mt-1 inputs" type="text" placeholder="Pie de Foto" />
     </div>
+    <br />
+    <div id="CompoImagen" class="w-50 bg-white text-dark p-3 rounded">
+        <div class="lblTitulo">
+            Video
+        </div>
+        <button class="boton-perfil">
+            <img class="perfil" src="~/img/trash.png" alt="Eliminar" width="19.64px">
+        </button>
+        <br />
+        <form action="/file-upload"
+              class="dropzone mt-1"
+              id="DropVideo">
+        </form>
+    </div>
+    <script src="~/js/DragAndDrop.js"></script>
+
 </body>

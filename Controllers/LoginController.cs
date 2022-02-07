@@ -32,14 +32,14 @@ namespace Kiosko.Controllers
 
             SqlParameter[] param = new SqlParameter[]
             {
-                new SqlParameter("@Email",item.Email),
-                new SqlParameter("@Pass",item.Pass),
-                new SqlParameter("@Usuario", item.Email),
+                new SqlParameter("@Email",item.vchEmail),
+                new SqlParameter("@Pass",item.vchPass),
+                new SqlParameter("@Usuario", item.vchEmail),
             };
 
             try
             {
-                var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @Email, @Pass", param).ToList();
+                var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @vchEmail, @vchPass", param).ToList();
                 
                 if (result.Count == 0)
                 {
@@ -49,7 +49,7 @@ namespace Kiosko.Controllers
                 {
                     //xd
                     TempData["msg"] = "Bienvenido";
-                    var res = _KColSoft.KColSoftsItem.FromSqlRaw<KColSoftModel>("exec dbo.RegistroDB @Usuario", param).ToList();
+                    var res = _KColSoft.KColSoftsItem.FromSqlRaw<KColSoftModel>("exec dbo.RegistroDB @vchUsuario", param).ToList();
                 }
 
                 return View("Login");
@@ -67,20 +67,20 @@ namespace Kiosko.Controllers
         {
             SqlParameter[] param = new SqlParameter[]
             {
-                new SqlParameter("@Email",item.Email),
-                new SqlParameter("@Pass",item.Pass)
+                new SqlParameter("@Email",item.vchEmail),
+                new SqlParameter("@Pass",item.vchPass)
             };
             try
             {
-                var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @Email, @Pass", param).ToList();
+                var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @vchEmail, @vchPass", param).ToList();
                 if (result.Count == 0)
                 {
-                    result[0].Pass = "1";
+                    result[0].vchPass = "1";
                     return Ok(result);
                 }
                 else
                 {
-                    result[0].Pass = "0";
+                    result[0].vchPass = "0";
                     return Ok(result);
                 }
             }

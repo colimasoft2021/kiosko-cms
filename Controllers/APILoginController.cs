@@ -43,21 +43,21 @@ namespace Kiosko.Controllers
             List<isLoginUser> res = new List<isLoginUser>();
             SqlParameter[] param = new SqlParameter[]
             {
-                new SqlParameter("@Email",item.Email),
-                new SqlParameter("@Pass",item.Pass)
+                new SqlParameter("@vchEmail",item.vchEmail),
+                new SqlParameter("@vchPass",item.vchPass)
             };
             try
             {
-                var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @Email, @Pass", param).ToList();
+                var result = _login.LoginItems.FromSqlRaw<LoginModel>("exec Loggin @vchEmail, @vchPass", param).ToList();
                 if (result.Count == 1)
                 {
                     //res = isLoginUser(item, 1);
-                    result[0].Pass = "1";
+                    result[0].vchPass = "1";
                     return Ok(result);
                 }
                 else
                 {
-                    result[0].Pass = "0";
+                    result[0].vchPass = "0";
                     return Ok(result);
                 }
             }
@@ -89,13 +89,13 @@ namespace Kiosko.Controllers
             List<isLoginUser> res = new List<isLoginUser>();
             if (band == 1)
             {
-                res[0].Email = item.Email;
+                res[0].Email = item.vchEmail;
                 res[0].isLogin = 1;
                 return (res[0]);
             }
             else
             {
-                res[0].Email = item.Email;
+                res[0].Email = item.vchEmail;
                 res[0].isLogin = 0;
                 return (res[0]);
             }

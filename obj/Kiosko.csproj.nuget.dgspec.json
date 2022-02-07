@@ -1,36 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kaike\\Source\\Repos\\kiosko-cms\\Kiosko.csproj": {}
+    "C:\\Users\\ulize\\Desktop\\Kiosco\\kiosko-cms\\Kiosko.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kaike\\Source\\Repos\\kiosko-cms\\Kiosko.csproj": {
+    "C:\\Users\\ulize\\Desktop\\Kiosco\\kiosko-cms\\Kiosko.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kaike\\Source\\Repos\\kiosko-cms\\Kiosko.csproj",
+        "projectUniqueName": "C:\\Users\\ulize\\Desktop\\Kiosco\\kiosko-cms\\Kiosko.csproj",
         "projectName": "Kiosko",
-        "projectPath": "C:\\Users\\Kaike\\Source\\Repos\\kiosko-cms\\Kiosko.csproj",
-        "packagesPath": "C:\\Users\\Kaike\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kaike\\Source\\Repos\\kiosko-cms\\obj\\",
+        "projectPath": "C:\\Users\\ulize\\Desktop\\Kiosco\\kiosko-cms\\Kiosko.csproj",
+        "packagesPath": "C:\\Users\\ulize\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ulize\\Desktop\\Kiosco\\kiosko-cms\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Kaike\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ulize\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,30 +37,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
-          "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
-              "target": "Package",
-              "version": "[5.0.13, )"
-            },
-            "Microsoft.Data.SqlClient": {
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            }
-          },
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -75,6 +49,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.21, 3.1.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -83,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

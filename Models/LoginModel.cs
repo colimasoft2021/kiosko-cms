@@ -11,8 +11,8 @@ namespace Kiosko.Models
     public class LoginModel
     {
         [Required]
-        public string vchEmail { get; set; }
+        public string Email { get; set; }
         [Required]
-        public string vchPass { get; set; }
+        public string Pass { get; set; }
     }
 }

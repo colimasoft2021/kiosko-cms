@@ -45,8 +45,8 @@ namespace Kiosko.Controllers
 
             SqlParameter[] param = new SqlParameter[]
             {
-                new SqlParameter("@Email",item.Email),
-                new SqlParameter("@Pass",item.Pass),
+                new SqlParameter("@Email",item.vchEmail),
+                new SqlParameter("@Pass",item.vchPass),
                /* new SqlParameter("@Usuario", item.Email),*/
             };
 

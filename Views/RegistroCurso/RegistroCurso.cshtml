@@ -6,34 +6,51 @@
     <link rel="stylesheet" href="~/css/Components.css" />
 </head>
 <body style="background-color:black">
-    <div id="CompoImagen" class="w-50 bg-white text-dark p-3 rounded">
-        <div class="lblTitulo">
-            Imagen
+    <div class="container">
+        <div id="CompoImagen" class="w-50 bg-white text-dark p-3 rounded">
+            <div class="lblTitulo">
+                Imagen
+            </div>
+            <button class="boton-perfil">
+                <img class="perfil" src="~/img/trash.png" alt="Eliminar" width="19.64px">
+            </button>
+            <br />
+            <form action="/file-upload"
+                  class="dropzone mt-1"
+                  id="DropImagen">
+            </form>
+            <input class="w-100 mt-1 inputs" type="text" placeholder="Pie de Foto" />
         </div>
-        <button class="boton-perfil">
-            <img class="perfil" src="~/img/trash.png" alt="Eliminar" width="19.64px">
-        </button>
         <br />
-        <form action="/file-upload"
-              class="dropzone mt-1"
-              id="DropImagen">
-        </form>
-        <input class="w-100 mt-1 inputs" type="text" placeholder="Pie de Foto" />
-    </div>
-    <br />
-    <div id="CompoImagen" class="w-50 bg-white text-dark p-3 rounded">
-        <div class="lblTitulo">
-            Video
+        <div id="CompoImagen" class="w-50 bg-white text-dark p-3 rounded">
+            <div class="lblTitulo">
+                Video
+            </div>
+            <button class="boton-perfil">
+                <img class="perfil" src="~/img/trash.png" alt="Eliminar" width="19.64px">
+            </button>
+            <br />
+            <form action="/file-upload"
+                  class="dropzone mt-1"
+                  id="DropVideo">
+            </form>
         </div>
-        <button class="boton-perfil">
-            <img class="perfil" src="~/img/trash.png" alt="Eliminar" width="19.64px">
-        </button>
         <br />
-        <form action="/file-upload"
-              class="dropzone mt-1"
-              id="DropVideo">
-        </form>
+        <div id="CompoImagen" class="w-50 bg-white text-dark p-3 rounded">
+            <div class="lblTitulo">
+                Enlace
+            </div>
+            <button class="boton-perfil">
+                <img class="perfil" src="~/img/trash.png" alt="Eliminar" width="19.64px">
+            </button>
+            <div>
+                <input class="inputTitulo" type="text"  placeholder="Titulo"/>
+                <input class="inputLink" type="text" placeholder="Link"/>
+                <p>Elige un color para asignarle.</p>
+                Color
+                <input class="Color-Selector" type="color">
+            </div>
+        </div>
     </div>
     <script src="~/js/DragAndDrop.js"></script>
-
 </body>

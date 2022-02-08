@@ -28,13 +28,11 @@ namespace Kiosko.Controllers
         [HttpPost]
         public IActionResult Login(LoginModel item)
         {
-
-
             SqlParameter[] param = new SqlParameter[]
             {
-                new SqlParameter("@Email",item.vchEmail),
-                new SqlParameter("@Pass",item.vchPass),
-                new SqlParameter("@Usuario", item.vchEmail),
+                new SqlParameter("@vchEmail",item.vchEmail),
+                new SqlParameter("@vchPass",item.vchPass),
+                new SqlParameter("@vchKUsuario", item.vchEmail),
             };
 
             try
@@ -49,7 +47,7 @@ namespace Kiosko.Controllers
                 {
                     //xd
                     TempData["msg"] = "Bienvenido";
-                    var res = _KColSoft.KColSoftsItem.FromSqlRaw<KColSoftModel>("exec dbo.RegistroDB @vchUsuario", param).ToList();
+                    var res = _KColSoft.KColSoftsItem.FromSqlRaw<KColSoftModel>("exec dbo.RegistroDB @vchKUsuario", param).ToList();
                 }
 
                 return View("Login");
@@ -67,8 +65,8 @@ namespace Kiosko.Controllers
         {
             SqlParameter[] param = new SqlParameter[]
             {
-                new SqlParameter("@Email",item.vchEmail),
-                new SqlParameter("@Pass",item.vchPass)
+                new SqlParameter("@vchEmail",item.vchEmail),
+                new SqlParameter("@vchPass",item.vchPass)
             };
             try
             {

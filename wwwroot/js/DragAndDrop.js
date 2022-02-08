@@ -1,7 +1,7 @@
 Dropzone.options.DropImagen = {
     paramName: "file", // The name that will be used to transfer the file
     maxFilesize: 2, // MB
-    acceptedFiles: ".jpg",
+    acceptedFiles: ".png",
 
     //accept: function (file, done) {
     //    if (file.name == "justinbieber.jpg") {
@@ -13,7 +13,7 @@ Dropzone.options.DropImagen = {
 
 Dropzone.options.DropVideo = {
     paramName: "file", // The name that will be used to transfer the file
-    maxFilesize: 4000, // MB
+    maxFilesize: 400, // MB
     acceptedFiles: ".mp4",
     
 
